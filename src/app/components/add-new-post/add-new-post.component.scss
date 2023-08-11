@@ -1,0 +1,45 @@
+.new-post {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  min-height: 70% ;
+  border-radius: 16px;
+  background-color: #c3acd0;
+  transition: all 0.7s ease-in-out;
+}
+
+input {
+  padding: 8px;
+  margin: 14px;
+  font-size: x-large;
+  border: none;
+  outline: none;
+  border-radius: 8px;
+  transition: 0.4s ease;
+  &:hover {
+    background-color: white;
+  }
+}
+
+button {
+  width: 200px;
+  font-size: large;
+  font-weight: 600;
+  color: #000000;
+  cursor: pointer;
+  margin: 20px;
+  padding: 8px 24px;
+  text-align: center;
+  border: none;
+  background-size: 300% 100%;
+  border-radius: 50px;
+  -o-transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+
+  &:hover {
+    background-color: #674188;
+    color: white;
+  }
+}

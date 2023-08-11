@@ -1,0 +1,18 @@
+.element {
+  display: inline-block;
+  width: calc(33.333% - 12px);
+  height: 50px;
+  background-color: #674188;
+  margin: 6px;
+
+  &:nth-child(4),
+  &:nth-child(5) {
+    width: calc(50% - 12px);
+    background-color: #c02525;
+  }
+
+  &:nth-child(n+6):nth-child(-n+9) {
+    width: calc(25% - 12px);
+    background-color: #449fdb;
+  }
+}

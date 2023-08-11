@@ -1,0 +1,13 @@
+<div class="content">
+
+  <div>
+      <app-add-new-post (addNewUrl)="addItem($event)" ></app-add-new-post>
+  </div>
+
+  <div>
+      <ng-container *ngFor="let image of imageUrl" >
+        <app-post [imageUrl]="image" ></app-post>
+      </ng-container>
+  </div>
+</div>
+

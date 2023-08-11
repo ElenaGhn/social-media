@@ -1,0 +1,25 @@
+<div *ngIf="!isLoggedIn; then loginPage else mainContent"></div>
+
+<ng-template #loginPage>
+  <app-login></app-login>
+</ng-template>
+
+<ng-template #mainContent>
+  <nav *ngIf="isLoggedIn">
+    <app-navigation></app-navigation>
+  </nav>
+
+  <main class="site-container">
+    <div class="default-container">
+      <div class="content">
+        <router-outlet></router-outlet>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="content">
+      <app-footer></app-footer>
+    </div>
+  </footer>
+</ng-template>
