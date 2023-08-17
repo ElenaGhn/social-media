@@ -1,4 +1,4 @@
-
+<img src="assets/logo.png" class="login-nav">
   <div class="background-login">
     <div class="shape"></div>
     <div class="shape"></div>
@@ -7,7 +7,7 @@
   </div>
 
   <form class="form-content">
-    <h3 class="login-text">Login Here</h3>
+        <p>Login</p>
 
     <label for="username" class="username-label"></label>
     <input type="text" placeholder="Email or Phone" id="username">
@@ -15,9 +15,10 @@
     <label for="password" class="password-label"></label>
     <input type="password" placeholder="Password" id="password">
 
-    <button (click)="login()" class="login-register-button">Log In</button>
-      <p class="forgot-password">Forgot password?</p>
-    <button (click)="register()" class="login-register-button">Register</button>
+    <button routerLink="/login"  (click)="login()" class="login-register-button">Sign In</button>
+      <a href="#" class="forgot-password">Forgot password?</a>
+    <button  routerLink="/register"  class="login-register-button">Sign Up</button>
+
 
 
     <div class="social-icon">

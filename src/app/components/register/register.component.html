@@ -1,1 +1,13 @@
-<p>register works!</p>
+<form [formGroup]="registerForm" class="form-content">
+
+  <p>Register</p>
+
+  <label for="username" class="username-label"></label>
+  <input formControlName="email"  type="text" placeholder="Email or Phone" id="username">
+
+  <label for="password" class="password-label"></label>
+  <input formControlName="password" type="password" placeholder="Password" id="password">
+
+  <button  routerLink="/register"  (click)="createUser()" class="login-register-button">Sign Up</button>
+
+</form>
