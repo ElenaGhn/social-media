@@ -1,3 +1,4 @@
+
 .background-login{
   width: 430px;
   height: 520px;
@@ -6,85 +7,154 @@
   left: 50%;
   top: 50%;
 }
+.background, .shape{
+  height: 200px;
+  width: 200px;
+  position: absolute;
+  border-radius: 50%;
+  transition: 0.8s ease-in-out;
+}
+.shape:first-child{
+  background: linear-gradient(
+      #FFFBF5,
+      #674188
+  );
+  left: -100px;
+  top: -200px;
+   &:hover  {
+     height: 250px;
+     width: 250px;
+}
+}
+
+.shape:nth-child(2) {
+  background: linear-gradient(
+      #FFFBF5,
+      #674188
+  );
+  left: 600px;
+  top: -250px;
+
+  &:hover {
+    height: 250px;
+    width: 250px;
+  }
+}
 
 
+.shape:nth-child(3) {
+  background: linear-gradient(
+      #674188,
+      #FFFBF5
+  );
+  right: 600px;
+  bottom: -150px;
 
-.form-content{
-  height: 520px;
+  &:hover {
+    height: 250px;
+    width: 250px;
+  }
+}
+
+.shape:last-child{
+  background: linear-gradient(
+      to right,
+      #674188,
+      #FFFBF5
+  );
+  right: -100px;
+  bottom: -180px;
+  transition: 0.8s ease-in-out;
+
+  &:hover  {
+    height: 250px;
+    width: 250px;
+  }
+}
+
+.form-content {
+  height: 540px;
   width: 400px;
-  background-color: rgb(237, 225, 252);
+  background-color: rgba(195, 172, 208, 0.29);
   position: absolute;
   transform: translate(-50%,-50%);
   top: 50%;
   left: 50%;
   border-radius: 10px;
+  backdrop-filter: blur(10px);
   border: 2px solid rgba(255,255,255,0.1);
-  box-shadow: 0 0 40px rgba(62, 50, 77, 0.6);
+  box-shadow: 0 0 40px rgba(8,7,16,0.6);
   padding: 50px 35px;
 }
 
 .form-content *{
   font-family: 'Poppins',sans-serif;
-  color: #000000;
   letter-spacing: 0.5px;
   outline: none;
   border: none;
 }
-
-login-text{
-  font-size: 36px;
+.login-text{
+  color: #674188;
+  background-color: transparent;
+  font-size: 32px;
   font-weight: 500;
   line-height: 42px;
   text-align: center;
 }
 
-.password-label, .username-label{
+.username-label{
   display: block;
-  margin: 10px;
+  margin-top: 30px;
   font-size: 16px;
   font-weight: 500;
 }
 
-#username, #password{
+#password, #username{
   display: block;
   height: 50px;
-  width: 100%;
-  background-color: rgb(255, 255, 255);
-  border-radius: 10px;
+  width: 380px;
+  background-color: #FFFBF5;
+  border-radius: 3px;
   padding: 0 10px;
-  margin-top: 20px;
-  font-size: 14px;
+  margin-top: 8px;
+  font-size: medium;
   font-weight: 300;
 }
 
-::placeholder{
-  color: #b2abab;
-}
-
-.login-button{
+.login-register-button {
   margin-top: 50px;
   width: 100%;
-  background-color: rgba(185, 152, 246, 0.75);
-  border-radius: 10px;
-  color: #080710;
+  background-color: #674188;
   padding: 15px 0;
+  color: white;
   font-size: 18px;
   font-weight: 600;
+  border-radius: 5px;
   cursor: pointer;
-  transition: 0.5s ease-in-out;
+  transition: 0.4s ease-in-out;
 
-    &:hover {
-      background-color: #674188;
-      color: #e7e7e7;
-    }
+  &:hover {
+    background: linear-gradient(
+        #674188,
+        #C3ACD0
+    );
+    color: black;
+
+  }
 }
 
-.social-icon{
+.social-icon {
   display: flex;
-  justify-content: space-around;
-  font-size: large;
+  justify-content: space-evenly;
   margin-top: 50px;
+  color: #674188;
+  font-size: x-large;
   cursor: pointer;
-
 }
 
+.forgot-password {
+  text-align: right;
+  font-size: 12px;
+  margin-top: 4px;
+
+}
