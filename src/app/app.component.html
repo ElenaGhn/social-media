@@ -1,9 +1,11 @@
-<div *ngIf="!authService.isLoggedIn; then loginPage else mainContent"></div>
+<div *ngIf="!authService.isLoggedIn; then loginPage else mainContent" ></div>
 <ng-template #loginPage>
   <router-outlet></router-outlet>
 </ng-template>
 
-<ng-template #mainContent>
+<ng-template #mainContent>  <!-- este o referință la acest șablon, care poate fi folosit în alte părți ale codului
+                        pentru a face referire la conținutul din acest șablon-->
+
   <nav *ngIf="authService.isLoggedIn">
     <app-navigation></app-navigation>
   </nav>

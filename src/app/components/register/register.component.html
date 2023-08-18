@@ -1,13 +1,30 @@
-<form [formGroup]="registerForm" class="form-content">
+<div class="body">
 
-  <p>Register</p>
+  <div class="nav">
+    <img  src="assets/logo.png" class="logo-nav">
+  </div>
 
-  <label for="username" class="username-label"></label>
-  <input formControlName="email"  type="text" placeholder="Email or Phone" id="username">
+  <div class="background-login" >
+    <div class="shape"></div>
+    <div class="shape"></div>
+    <div class="shape"></div>
+    <div class="shape"></div>
+  </div>
 
-  <label for="password" class="password-label"></label>
-  <input formControlName="password" type="password" placeholder="Password" id="password">
+  <form [formGroup]="registerForm" class="form-content" >
+    <p class="register-title" >Register</p>
+    <label for="username" class="username-label"></label>
+    <input formControlName="email"  type="text" placeholder="Enter your E-Mail" id="username">
 
-  <button  routerLink="/register"  (click)="createUser()" class="login-register-button">Sign Up</button>
+    <label for="password" class="password-label"></label>
+    <input formControlName="password" type="password" placeholder="Password" id="password">
 
-</form>
+    <label for="password" class="password-label"></label>
+    <input formControlName="password" type="password" placeholder="Password " id="repeat-password">
+
+    <button  routerLink="/register"  (click)="createUser()" class="login-register-button">Sign Up</button>
+
+    <button routerLink="/login"  class="login-register-button">Sign In</button>
+
+  </form>
+</div>

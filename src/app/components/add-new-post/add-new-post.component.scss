@@ -3,16 +3,19 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  padding: 30px 0;
+  margin: 28px 0;
   min-height: 70% ;
   border-radius: 16px;
   background-color: #c3acd0;
   transition: all 0.7s ease-in-out;
 }
 
-input {
-  padding: 8px;
+.input-add-new-post {
+  padding: 10px 8px;
   margin: 14px;
-  font-size: x-large;
+  width: 400px;
+  font-size: large;
   border: none;
   outline: none;
   border-radius: 8px;

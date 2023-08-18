@@ -54,14 +54,6 @@ button {
   cursor: pointer;
 }
 
-.logo-nav {
-  padding: 10px 15px;
-  width: 180px;
-  filter: alpha(opacity=40);
-  -webkit-transition: none;
-  -ms-transition: none;
-  -o-transition: none;
-  transition: none;
 
   &:hover {
     max-width: 100%;
