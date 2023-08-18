@@ -18,8 +18,8 @@ import { ElementsAboutComponent } from './components/elements-about/elements-abo
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 import { AngularFireModule } from '@angular/fire/compat';
-
-
+import {CommonModule} from "@angular/common";
+import {LoginModule} from "./components/login/login.module";
 
 @NgModule({
   declarations: [
@@ -42,9 +42,11 @@ import { AngularFireModule } from '@angular/fire/compat';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    LoginModule,
     MatIconModule,
     ReactiveFormsModule,
     FormsModule,
+    CommonModule
   ],
   providers: [],
   bootstrap: [AppComponent]
