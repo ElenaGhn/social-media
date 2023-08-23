@@ -23,12 +23,9 @@ export class AuthService {
   //TODO: login mit User als parameter
     //TODO: this.afAuth.signInWithEmailAndPassword
 
-  login() {
-    const email = "user@example.com"
-    const password = "examplePassword"
-
-    console.log(email);
-    this.afAuth.signInWithEmailAndPassword(email, password)
+  login(user: User) {
+    console.log(user.email);
+    this.afAuth.signInWithEmailAndPassword(user.email, user.password)
       .then(userCredential => {
         console.log(userCredential.user);
         this.isLoggedIn = true;
@@ -40,11 +37,8 @@ export class AuthService {
   }
 
   // TODO: Implement user registration using this.afAuth.createUserWithEmailAndPassword
+
   saveUser(newUser: User, password: any) {
-    const savedUsers = this.getSavedUsers();
-    savedUsers.push(newUser);
-    localStorage.setItem('users', JSON.stringify(savedUsers));
-    console.log('User data saved:', newUser.email);
 
     this.afAuth.createUserWithEmailAndPassword(newUser.email, password)
       .then(userCredential => {

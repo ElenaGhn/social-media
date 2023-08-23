@@ -1,8 +1,7 @@
-import { Component } from '@angular/core';
-import firebase from 'firebase/compat/app';
+import {Component} from '@angular/core';
 import 'firebase/compat/auth';
-import { AuthService } from 'src/app/services/auth.service';
-import { environment } from 'src/environments/environment'; // Importă environment
+import {AuthService} from 'src/app/services/auth.service';
+import {User} from "./User";
 
 @Component({
   selector: 'app-login',
@@ -17,15 +16,10 @@ export class LoginComponent {
   constructor(private authService: AuthService) {
   }
 
-  /**
-   * @param email
-   */
   login() {
-    //TODO: email und passwort aus login HTML Form auslesen so wie bei register component
-
-    this.authService.login();
-
+    console.log(this.email)
+    console.log(this.password)
+    this.authService.login(new User(this.email, this.password));
     //TODO: mit user von login HTML Form AuthService function aufrufen
-
   }
 }
