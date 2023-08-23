@@ -1,3 +1,7 @@
+.body {
+  margin: 0;
+  overflow: hidden;
+}
 
 .background-login{
   width: 430px;
@@ -8,6 +12,65 @@
   top: 50%;
   background-color: rgba(103, 65, 136, 0.56);
 }
+
+.balloon-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+}
+
+.balloon {
+  width: 50px;
+  height: 50px;
+  background-color: #ff6384;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 100%;
+  transform: translateX(-50%);
+  animation: float 5s ease-in-out infinite;
+}
+
+.balloon:nth-child(1) {
+  left: 10%;
+  bottom: 100%;
+  animation-name: bounce;}
+
+.balloon:nth-child(2) {
+  left: 20%;
+  animation-delay: 1s;
+}
+
+.balloon:nth-child(3) {
+  left: 30%;
+  animation-delay: 1.5s;
+}
+
+.balloon:nth-child(4) {
+  left: 40%;
+  animation-delay: 2s;
+}
+
+.balloon:nth-child(5) {
+  left: 50%;
+  animation-delay: 2.5s;
+}
+
+.balloon:nth-child(6) {
+  left: 60%;
+  animation-delay: 3s;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(-100%);
+  }
+  50% {
+    transform: translateY(-120%);
+  }
+}
+
 
  .shape{
   height: 200px;
