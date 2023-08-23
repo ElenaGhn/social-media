@@ -20,6 +20,11 @@ import { RegisterComponent } from './components/register/register.component';
 import { AngularFireModule } from '@angular/fire/compat';
 import {CommonModule} from "@angular/common";
 import {LoginModule} from "./components/login/login.module";
+import {environment} from "../environments/environment";
+import {AngularFireAuthModule} from "@angular/fire/compat/auth";
+import {AngularFirestoreModule} from "@angular/fire/compat/firestore";
+import {AngularFireStorageModule} from "@angular/fire/compat/storage";
+import {AngularFireDatabaseModule} from "@angular/fire/compat/database";
 
 @NgModule({
   declarations: [
@@ -46,7 +51,12 @@ import {LoginModule} from "./components/login/login.module";
     MatIconModule,
     ReactiveFormsModule,
     FormsModule,
-    CommonModule
+    CommonModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+    AngularFireAuthModule,
+    AngularFirestoreModule,
+    AngularFireStorageModule,
+    AngularFireDatabaseModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

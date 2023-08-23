@@ -11,22 +11,21 @@ import { environment } from 'src/environments/environment'; // Importă environm
 })
 export class LoginComponent {
 
+  email: string = '';
+  password: string = '';
+
   constructor(private authService: AuthService) {
-    firebase.initializeApp(environment.firebaseConfig);
   }
 
+  /**
+   * @param email
+   */
   login() {
-    const email = 'user@example.com';
-    const password = 'examplePassword';
+    //TODO: email und passwort aus login HTML Form auslesen so wie bei register component
 
-    firebase.auth().signInWithEmailAndPassword(email, password)
-      .then(userCredential => {
-        console.log("work?")
-        console.log( userCredential.user);
-        this.authService.login();
-      })
-      .catch(error => {
-        console.error( error);
-      });
+    this.authService.login();
+
+    //TODO: mit user von login HTML Form AuthService function aufrufen
+
   }
 }

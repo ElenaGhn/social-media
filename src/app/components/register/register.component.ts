@@ -1,7 +1,10 @@
-import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { AuthService } from 'src/app/services/auth.service';
-import { Router } from '@angular/router';
+import {Component, OnInit} from '@angular/core';
+import {FormBuilder, FormGroup, Validators} from '@angular/forms';
+import {AuthService} from 'src/app/services/auth.service';
+import {Router} from '@angular/router';
+import {User} from "../login/User";
+import firebase from "firebase/compat";
+import { environment } from 'src/environments/environment'; // Importă environment
 
 
 @Component({
@@ -17,19 +20,17 @@ export class RegisterComponent implements OnInit {
 
   ngOnInit(): void {
     this.registerForm = this.fb.group({
-      email: this.fb.control('', Validators.required),
-      password: this.fb.control('', [Validators.required, Validators.minLength(3)])
+      email: this.fb.control('', [Validators.required, Validators.email]),
+      password: this.fb.control('', [Validators.required, Validators.minLength(6)])
     });
   }
 
   createUser() {
     if (this.registerForm.valid) {
-      const email = this.registerForm.value.email;
-      const password = this.registerForm.value.password;
-
-      this.authService.saveUser(email, password);
+      const email: string  = this.registerForm.value.email;
+      const password: string = this.registerForm.value.password;
+      this.authService.registerUser(email, password);
       this.registerForm.reset();
-
       this.router.navigate(['/home']);
     }
   }
