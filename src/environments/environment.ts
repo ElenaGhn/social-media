@@ -1,6 +1,6 @@
-const environment = {
+export const environment = {
   production: false,
-  firebase: {
+  firebaseConfig: {
     apiKey: "AIzaSyAHv1O3IHOckYVk4ye3djNt2v4TS3_6l3k",
     authDomain: "social-media-32cff.firebaseapp.com",
     projectId: "social-media-32cff",
@@ -10,3 +10,4 @@ const environment = {
     measurementId: "G-XZ639FYW6N"
   }
 };
+

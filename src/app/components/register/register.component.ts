@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import {FormBuilder, FormControl, FormGroup, Validators} from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { AuthService } from 'src/app/services/auth.service';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-register',
@@ -11,24 +13,24 @@ export class RegisterComponent implements OnInit {
 
   registerForm: FormGroup;
 
-  constructor(private fb: FormBuilder) {
-  }
+  constructor(private fb: FormBuilder, private authService: AuthService, private router: Router) {}
 
   ngOnInit(): void {
     this.registerForm = this.fb.group({
       email: this.fb.control('', Validators.required),
-      password: this.fb.control('', [Validators.required, Validators.minLength(8)])
+      password: this.fb.control('', [Validators.required, Validators.minLength(3)])
     });
-
-    //this.registerForm = new FormGroup({
-    //  email: new FormControl('', Validators.required),
-    //  password: new FormControl('', [Validators.required, Validators.minLength(8)])
-    //});
   }
 
   createUser() {
-   console.log(this.registerForm.value);
+    if (this.registerForm.valid) {
+      const email = this.registerForm.value.email;
+      const password = this.registerForm.value.password;
 
-   //TODO: funktionalität: User aus form in den auth-service speichen
+      this.authService.saveUser(email, password);
+      this.registerForm.reset();
+
+      this.router.navigate(['/home']);
+    }
   }
 }
