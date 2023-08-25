@@ -5,6 +5,11 @@
       <li><a routerLink="/contact">Contact</a></li>
       <li><a routerLink="/about">About</a></li>
       <li><a routerLink="/shared-post">Shared Posts</a></li>
-      <li><a routerLink="/login" (click)="logout()">Logout</a></li>
-    </ul>
-</div>
+      <li>
+        <app-my-account (logoutClicked)="hideSignOutButton(); logout()"></app-my-account>
+
+      </li>
+        </ul>
+      </div>
+
+

@@ -1,8 +1,6 @@
 import {Injectable} from '@angular/core';
 import {Router} from '@angular/router';
 import {User} from "../components/login/User";
-import firebase from "firebase/compat";
-import {environment} from "../../environments/environment";
 import {AngularFirestore} from "@angular/fire/compat/firestore";
 import {AngularFireAuth} from "@angular/fire/compat/auth";
 
@@ -32,7 +30,7 @@ export class AuthService {
         this.router.navigate(['home']);
       })
       .catch(error => {
-        console.error(error);
+        alert('Error registering user: ' + error.message);
       });
   }
 
@@ -45,7 +43,7 @@ export class AuthService {
         console.log('User registered:', userCredential.user);
       })
       .catch(error => {
-        console.error('Error registering user:', error);
+        alert('Error registering user: ' + error.message);
       });
   }
 

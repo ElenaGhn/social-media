@@ -8,9 +8,19 @@ import {AuthService} from "../../services/auth.service";
 })
 export class NavigationComponent {
 
-  constructor(private authService: AuthService) {}
+  isSignOutVisible: boolean = false;
+
+
+  constructor(private authService: AuthService) {
+  }
+
+
+  hideSignOutButton() {
+    this.isSignOutVisible = false;
+  }
+
 
   logout() {
-    this.authService.logout();
+    this.authService.logout()
   }
 }
