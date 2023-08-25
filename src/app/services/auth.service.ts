@@ -57,6 +57,20 @@ export class AuthService {
     return savedUsers ? JSON.parse(savedUsers) : [];
   }
 
+  getCurrentUser(): Promise<User | null> {
+    return new Promise((resolve, reject) => {
+      this.afAuth.onAuthStateChanged((user) => {
+        if (user) {
+          // Utilizatorul este autentificat, poți returna detaliile utilizatorului
+          const currentUser: User = { email: user.email || '', password: '' };
+          resolve(currentUser);
+        } else {
+          // Utilizatorul nu este autentificat
+          resolve(null);
+        }
+      });
+    });
+  }
   logout() {
     this.isLoggedIn = false;
   }

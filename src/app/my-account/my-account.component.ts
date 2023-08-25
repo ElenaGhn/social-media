@@ -1,7 +1,7 @@
-import { Component, OnInit, EventEmitter, Output } from '@angular/core';
-import {AuthService} from "../services/auth.service";
+import { Component, OnInit } from '@angular/core';
+import { AuthService } from "../services/auth.service";
 import { Router } from '@angular/router';
-import {User} from "../components/login/User";
+import { User } from "../components/login/User";
 
 @Component({
   selector: 'app-my-account',
@@ -9,17 +9,16 @@ import {User} from "../components/login/User";
   styleUrls: ['./my-account.component.scss']
 })
 export class MyAccountComponent implements OnInit {
-  @Output() logoutClicked = new EventEmitter<void>();
-
-
-  constructor(private authService: AuthService, private router: Router) {
-  }
-
   isSignOutVisible: boolean = false;
-  user : User;
+  user: User | null = null;
 
-  ngOnInit(): void {}
+  constructor(private authService: AuthService, private router: Router) {}
 
+  ngOnInit(): void {
+    this.authService.getCurrentUser().then((currentUser) => {
+      this.user = currentUser;
+    });
+  }
   showSignOutButton() {
     this.isSignOutVisible = true;
   }
@@ -27,9 +26,6 @@ export class MyAccountComponent implements OnInit {
   hideSignOutButton() {
     this.isSignOutVisible = false;
   }
-
-
-
 
   logout() {
     this.authService.logout();
