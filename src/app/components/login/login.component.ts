@@ -18,8 +18,6 @@ export class LoginComponent {
 
   login() {
     console.log(this.email)
-    console.log(this.password)
     this.authService.login(new User(this.email, this.password));
-    //TODO: mit user von login HTML Form AuthService function aufrufen
   }
 }

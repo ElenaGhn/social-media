@@ -19,16 +19,18 @@ export class MyAccountComponent implements OnInit {
       this.user = currentUser;
     });
   }
+
   showSignOutButton() {
     this.isSignOutVisible = true;
   }
 
-  hideSignOutButton() {
-    this.isSignOutVisible = false;
-  }
 
   logout() {
     this.authService.logout();
     this.router.navigate(['/login']);
+  }
+
+  closeButton() {
+    this.isSignOutVisible = false;
   }
 }
