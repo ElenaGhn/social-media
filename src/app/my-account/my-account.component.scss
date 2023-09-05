@@ -1,45 +1,45 @@
-.dropdown{
+.my-account-wrapper {
   position: relative;
   display: inline-block;
-  margin-right: 60px; /* Ajustează la nevoie */
+  margin-right: 60px;
 }
 
-.dropdown button {
+.my-account-dropdown-item{
   background-color: transparent;
   border: none;
   cursor: pointer;
-  font-size: large;
+  font-size: medium;
   color: white;
 }
 
-.dropdown ul {
-  display: none;
+.my-account-dropdown-menu {
   position: absolute;
+  display: none;
   top: 100%;
   left: -100px;
+  padding: 40px;
   background-color: transparent;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  padding: 40px;
   list-style: none;
 }
 
-.dropdown ul {
+.my-account-dropdown ul {
   display: block;
 }
 
-.dropdown li {
+.my-account-dropdown li {
   margin: 10px;
   padding: 15px;
 }
 
 
-.dropdown span {
+.my-account-dropdown span {
   display: block;
   font-weight: bold;
 }
 
 
-.dropdown-item {
+.my-account-dropdown-list {
   padding: 8px 24px;
   border-radius: 8px;
   color: black;
@@ -52,9 +52,9 @@
   }
 }
 
-.close-button {
+.my-account-close-button {
+  display: block;
+  text-align: right;
   font-size: small;
-  float: right;
   cursor: pointer;
-
 }

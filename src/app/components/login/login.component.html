@@ -1,50 +1,17 @@
-<div class="body">
+<app-navigation></app-navigation>
 
-  <div class="nav">
-    <img  src="assets/logo.png" class="logo-nav">
-  </div>
+<div class="default-auth-wrapper">
+  <div class="default-auth-background">
+    <form>
+      <input type="text" placeholder="Email or Phone" id="username" name="email" [(ngModel)]="email" class="default-auth-input ">
+      <input type="password" placeholder="Password" id="password" name="password" [(ngModel)]="password" class="default-auth-input ">
 
-  <div class="balloon-container">
-    <div class="balloon"></div>
-    <div class="balloon"></div>
-    <div class="balloon"></div>
-    <div class="balloon"></div>
-    <div class="balloon"></div>
-    <div class="balloon"></div>
-  </div>
+      <button routerLink="/login" (click)="login()" class="login-button">Login</button>
 
-
-  <div class="background-login">
-      <div class="shape"></div>
-      <div class="shape"></div>
-      <div class="shape"></div>
-      <div class="shape"></div>
-      <div class="shape"></div>
-      <div class="shape"></div>
-      <div class="shape"></div>
-      <div class="shape"></div>
-      <div class="shape"></div>
-    </div>
-
-    <form class="form-content">
-          <p class="login-text" >Login</p>
-
-      <label for="username" class="username-label"></label>
-      <input type="text" placeholder="Email or Phone" id="username" name="email" [(ngModel)]="email">
-
-      <label for="password" class="password-label"></label>
-      <input type="password" placeholder="Password" id="password" name="password" [(ngModel)]="password">
-
-      <button routerLink="/login"  (click)="login()" class="login-register-button">Sign In</button>
-        <a href="#" class="forgot-password">Forgot password?</a>
-      <button  routerLink="/register"  class="login-register-button">Sign Up</button>
-
-      <div class="social-icon">
-        <div class="go"><i class="icon-twitter"></i>  </div>
-        <div class="fb"><i class="icon-facebook"></i>  </div>
-        <div class="fb"><i class="icon-whatsapp"></i>  </div>
-        <div class="fb"><i class="icon-instagram"></i>  </div>
-      </div>
-
+      <a href="#" class="login-forgot-password">Forgot password?</a>
+      <p> You dont't have an account?<a routerLink="/register">Register</a></p>
     </form>
+  </div>
 </div>
+
+<!-- TODO: Style for p tag -->

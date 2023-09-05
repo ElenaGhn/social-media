@@ -16,7 +16,7 @@ export class AuthService {
   constructor(private router: Router,
               public afs: AngularFirestore, // Inject Firestore service
               public afAuth: AngularFireAuth, // Inject Firebase auth service
-  ) {  }
+  ) { }
 
   //TODO: login mit User als parameter
     //TODO: this.afAuth.signInWithEmailAndPassword

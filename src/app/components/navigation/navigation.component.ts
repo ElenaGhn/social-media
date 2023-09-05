@@ -14,11 +14,13 @@ export class NavigationComponent {
   constructor(private authService: AuthService) {
   }
 
+  isLoggedIn() {
+    return this.authService.isLoggedIn;
+  }
 
   hideSignOutButton() {
     this.isSignOutVisible = false;
   }
-
 
   logout() {
     this.authService.logout()

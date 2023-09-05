@@ -1,37 +1,28 @@
 <div *ngIf="imageUrl" class="post">
-
   <div class="post-image-wrapper">
      <img [src]="imageUrl" alt="imgCat"  class="post-image">
-
     <div class="post-buttons">
       <div class="post-image-button-action icon-heart" (click)="likeEvent()">
-        <span *ngIf="liked" class="liked-post icon-heart"></span>
+        <span *ngIf="liked" class="post-liked-post icon-heart"></span>
       </div>
-
       <div class="post-image-button-action icon-bubble2" (click)="toggleComment()"></div>
-
       <div class="post-image-button-action icon-share2" (click)="toggleShare($event)"></div>
     </div>
   </div>
 
-  <div class="share-window" *ngIf="showShareWindow">
-    <p class="share-text">Share post with your friends</p>
-    <button (click)="closeDiv($event)" class="button-close">Share</button>
+  <div class="post-share-window" *ngIf="showShareWindow">
+    <p class="post-share-text">Share post</p>
+    <button (click)="closeDiv($event)" class="post-button-close">Share</button>
   </div>
 
-  <div class="comment-label" *ngIf="showCommentLabel" >
-    <input [(ngModel)]="commentText" (click)="addComment()" placeholder="Enter your comment..." class="add-comment-input ">
-
-    <button (click)="addComment()" class="button-close">Add</button>
-
-    <button (click)="CommentCloseButton()" class="button-close">Close </button>
+  <div class="post-comment-label" *ngIf="showCommentLabel" >
+    <input [(ngModel)]="commentText" (click)="addComment()" placeholder="Enter your comment..." class="post-add-comment-input ">
+    <button (click)="addComment()" class="post-button-close">Add</button>
+    <button (click)="CommentCloseButton()" class="post-button-close">Close </button>
   </div>
 
 
-  <div *ngFor="let comment of comments; let i = index" class="comment-list">
-      {{ comment }}
-    <div (click)="deleteAddedComment(i)" class="added-comment icon-bin"></div>
-  </div>
+  <div *ngFor="let comment of comments; let i = index" class="post-comment-list">{{ comment }}</div>
 </div>
 
 

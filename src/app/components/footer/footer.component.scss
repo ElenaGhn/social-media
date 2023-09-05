@@ -1,15 +1,24 @@
-.container-footer {
+.footer-container {
   display: flex;
   justify-content: space-between;
   align-items: baseline;
   margin-top: 15px;
 }
 
-.content-list {
+.footer-content-list {
 display: flex;
 }
 
-footer a {
+.footer-icons-wrapper,
+.footer-list-unstyled {
+  list-style-type: none;
+}
+
+.footer-list-item {
+  margin-bottom: 6px;
+}
+
+a {
   color: #EAE3D2;
   text-decoration:none;
   font-family: Cantarell, serif;
@@ -21,37 +30,23 @@ footer a:hover, footer a:focus {
   text-decoration: none;
 }
 
-footer .form-control {
-  background-color: #EAE3D2;
-  border: none;
-  resize: none;
-}
-
-.footer-icons-wrapper {
-  padding: 0;
-}
-
-.footer-icons-wrapper,
-.list-unstyled {
-  list-style-type: none;
-}
-
-
-.contact-container {
+.footer-contact-container {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-li a {
-  margin-bottom:  10px;
+.footer-form-control {
+  background-color: #EAE3D2;
+  border: none;
+  resize: none;
 }
 
-#footer-message, #input-email  {
-  padding: 4px 8px;
-  margin: 5px 6px;
+
+.footer-form-control  {
   width: 300px;
-  height: 25px;
+  margin: 5px 6px;
+  padding: 4px 8px;
   border-bottom: 1px solid #F9F5EB;
   border-radius: 8px;
   outline: none;
@@ -64,27 +59,22 @@ li a {
   }
 }
 
-.button-send {
+.footer-button-send {
   display: flex;
+  margin: 15px 0;
   padding: 8px 20px;
   font-size: medium;
   z-index: 2;
   border-radius: 8px;
   border: none;
-  margin: 15px 0;
 
   &:hover {
     background-color: #EAE3D2;
   }
 }
 
-
-#qr-name {
+#footer-qr-name {
   display: flex;
   justify-content: center;
   color: #EAE3D2;
-}
-
-.footer-list-item {
-  margin: 15px 0;
 }

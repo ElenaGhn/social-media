@@ -1,15 +1,9 @@
-<div class="navigation-list">
+<div class="navigation-wrapper">
   <img src="assets/logo.png" alt="" class="logo-nav" routerLink="/home">
-    <ul>
-      <li><a routerLink="/home">Home</a></li>
-      <li><a routerLink="/contact">Contact</a></li>
-      <li><a routerLink="/about">About</a></li>
-      <li><a routerLink="/shared-post">Shared Posts</a></li>
-      <li>
-        <app-my-account (logoutClicked)="hideSignOutButton(); logout()"></app-my-account>
-
-      </li>
-        </ul>
-      </div>
-
-
+  <ul class="navigation-list" *ngIf="isLoggedIn()">
+    <li class="navigation-list-item"><a routerLink="/contact" class="navigation-list-item-link">Contact</a></li>
+    <li class="navigation-list-item"><a routerLink="/about" class="navigation-list-item-link">About</a></li>
+    <li class="navigation-list-item"><a routerLink="/shared-post" class="navigation-list-item-link">Shared Posts</a></li>
+    <li class="navigation-list-item"><app-my-account class="navigation-list-item-link"></app-my-account></li>
+  </ul>
+</div>

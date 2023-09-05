@@ -1,30 +1,15 @@
-<div class="body">
+<app-navigation></app-navigation>
 
-  <div class="nav">
-    <img  src="assets/logo.png" class="logo-nav">
+<div class="default-auth-wrapper">
+  <div class="default-auth-background">
+    <form [formGroup]="registerForm" (ngSubmit)="createUser()">
+      <input formControlName="email"  type="text" placeholder="Enter your E-Mail" id="username" class="default-auth-input ">
+      <input formControlName="password" type="password" placeholder="Password" id="password" class="default-auth-input ">
+      <input formControlName="password" type="password" placeholder="Repeat Password" id="repeat-password" class="default-auth-input ">
+
+      <button  routerLink="/register" type="submit" class="register-button">Register</button>
+
+      <p>You have an account?<a routerLink="/login">Login</a></p>
+    </form>
   </div>
-
-  <div class="background-login" >
-    <div class="shape"></div>
-    <div class="shape"></div>
-    <div class="shape"></div>
-    <div class="shape"></div>
-  </div>
-
-  <form [formGroup]="registerForm" (ngSubmit)="createUser()" class="form-content" >
-    <p class="register-title" >Register</p>
-    <label for="username" class="username-label"></label>
-    <input formControlName="email"  type="text" placeholder="Enter your E-Mail" id="username">
-
-    <label for="password" class="password-label"></label>
-    <input formControlName="password" type="password" placeholder="Password" id="password">
-
-    <label for="password" class="password-label"></label>
-    <input formControlName="password" type="password" placeholder="Repeat Password" id="repeat-password">
-
-    <button  routerLink="/register" type="submit" class="login-register-button">Sign Up</button>
-
-    <button routerLink="/login"  class="login-register-button">Sign In</button>
-
-  </form>
 </div>
