@@ -18,9 +18,6 @@ export class AuthService {
               public afAuth: AngularFireAuth, // Inject Firebase auth service
   ) { }
 
-  //TODO: login mit User als parameter
-    //TODO: this.afAuth.signInWithEmailAndPassword
-
   login(user: User) {
     console.log(user.email);
     this.afAuth.signInWithEmailAndPassword(user.email, user.password)
@@ -34,12 +31,10 @@ export class AuthService {
       });
   }
 
-  // TODO: Implement user registration using this.afAuth.createUserWithEmailAndPassword
-
+  //ein neuen user zu registrieren und seine info zu speichern.
   saveUser(newUser: User, password: any) {
-
     this.afAuth.createUserWithEmailAndPassword(newUser.email, password)
-      .then(userCredential => {
+      .then(userCredential => { //Wenn alles gut geht uns einzuloggen, kann ich sehen wer sich eingeloggt hat.
         console.log('User registered:', userCredential.user);
       })
       .catch(error => {
@@ -47,31 +42,42 @@ export class AuthService {
       });
   }
 
+// neue freunde im club adden
   registerUser(email: string, password: string) {
     const newUser: User = {email: email, password: password};
     this.saveUser(newUser, password);
   }
 
+//überprüft on gespeicherte daten sind von user
   getSavedUsers(): { email: string, password: string }[] {
     const savedUsers = localStorage.getItem('users');
     return savedUsers ? JSON.parse(savedUsers) : [];
   }
 
   getCurrentUser(): Promise<User | null> {
-    return new Promise((resolve, reject) => {
-      this.afAuth.onAuthStateChanged((user) => {
+    return new Promise((resolve, reject) => { //
+      this.afAuth.onAuthStateChanged((user) => { //wenn jemand in meine App reinkommt oder rausgeht
         if (user) {
-          // Utilizatorul este autentificat, poți returna detaliile utilizatorului
+          // wenn der user eingellogt ist kann man user details returnieren
           const currentUser: User = { email: user.email || '', password: '' };
           resolve(currentUser);
         } else {
-          // Utilizatorul nu este autentificat
-          resolve(null);
+          // nicht eingellogt
+      resolve(null);
         }
       });
     });
   }
+
   logout() {
     this.isLoggedIn = false;
   }
 }
+
+// Promise : as ist wie der Vertrag oder das Versprechen, das du machst.
+// Du sagst: "Ich verspreche, etwas für dich zu tun,
+// aber ich werde es nur tun, wenn alles gut geht."
+
+
+//  getSavedUsers(), die dazu verwendet wird, gespeicherte
+//  Benutzerdaten aus dem lokalen Speicher deines Browsers abzurufen

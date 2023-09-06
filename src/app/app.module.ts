@@ -25,7 +25,7 @@ import {AngularFireAuthModule} from "@angular/fire/compat/auth";
 import {AngularFirestoreModule} from "@angular/fire/compat/firestore";
 import {AngularFireStorageModule} from "@angular/fire/compat/storage";
 import {AngularFireDatabaseModule} from "@angular/fire/compat/database";
-import { MyAccountComponent } from './my-account/my-account.component';
+import { MyAccountComponent } from './components/my-account/my-account.component';
 import { BallonsComponent } from './components/ballons/ballons.component';
 
 @NgModule({

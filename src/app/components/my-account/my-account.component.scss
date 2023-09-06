@@ -1,0 +1,65 @@
+.my-account-wrapper {
+  position: fixed;
+  top: 0;
+  right: 0;
+  display: block;
+  text-align: right;
+  height: 100%;
+  width: 250px;
+}
+
+.my-account-dropdown-item{
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: medium;
+  color: white;
+  margin-top: 30px;
+}
+
+.my-account-dropdown-menu {
+  list-style-type: none;
+  padding: 25px;
+  margin-top: 20px
+}
+
+
+.my-account-dropdown a {
+  display: block;
+  padding: 10px;
+  color: #fff;
+  text-decoration: none;
+}
+
+
+.my-account-user {
+  margin-bottom: 20px;
+}
+
+.my-account-dropdown-list, {
+  padding: 8px 24px;
+  border-radius: 8px;
+  color: black;
+  cursor: pointer;
+  background-color: #C3ACD0;
+
+  &:hover {
+    background-color: #674188;
+    color: white;
+  }
+}
+
+.my-account-close-button {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 6px;
+  border-radius: 6px;
+  text-align: right;
+  font-size: medium;
+  cursor: pointer;
+
+   &:hover {
+     background-color: #674188;
+     color: white;
+   }
+}

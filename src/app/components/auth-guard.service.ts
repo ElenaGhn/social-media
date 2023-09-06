@@ -4,8 +4,8 @@ import {AuthService} from '../services/auth.service';
 
 
 @Injectable()
-export class AuthGuard implements CanActivate {
-
+export class AuthGuard implements CanActivate {  // darf man sich einlogen oder nicht
+// es ist getstrichen weil schon aalt ist und bald ersetzt sein soll
   constructor(private authService: AuthService, private router: Router) {
   }
 
@@ -17,3 +17,7 @@ export class AuthGuard implements CanActivate {
     return false;
   }
 }
+
+
+// Route: Wo du auf die seite gehen kannst
+// auth service: Dass sind die 'schlussel' die man braucht die 'türen' in deiner app zu öffnen

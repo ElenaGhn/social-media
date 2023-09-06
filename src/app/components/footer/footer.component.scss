@@ -15,7 +15,7 @@ display: flex;
 }
 
 .footer-list-item {
-  margin-bottom: 6px;
+  margin: 10px 18px
 }
 
 a {
@@ -24,34 +24,23 @@ a {
   font-family: Cantarell, serif;
 }
 
-
-footer a:hover, footer a:focus {
-  color: #EAE3D2;
-  text-decoration: none;
-}
-
 .footer-contact-container {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.footer-form-control {
-  background-color: #EAE3D2;
-  border: none;
-  resize: none;
-}
-
-
 .footer-form-control  {
   width: 300px;
-  margin: 5px 6px;
-  padding: 4px 8px;
-  border-bottom: 1px solid #F9F5EB;
-  border-radius: 8px;
+  margin: 10px 0;
+  padding: 6px 0;
+  border-radius: 6px;
+  font-size: small;
   outline: none;
   color: black;
-  background-color: transparent;
+  border: none;
+  resize: none;
+  background-color: #c3acd0;
   transition: 0.5s ease-in-out;
 
   &:hover {
@@ -77,4 +66,5 @@ footer a:hover, footer a:focus {
   display: flex;
   justify-content: center;
   color: #EAE3D2;
+  font-size: small;
 }

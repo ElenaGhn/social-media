@@ -1,7 +1,7 @@
   <div class="my-account-wrapper">
     <button  type="button" aria-expanded="false" (click)="showSignOutButton()" class="my-account-dropdown-item">My Account</button>
     <ul class="my-account-dropdown-menu" *ngIf="isSignOutVisible" >
-      <li *ngIf="user"> {{ user.email }}</li>
+      <li class="my-account-user" *ngIf="user"> {{ user.email }}</li>
       <li><a class="my-account-dropdown-list" (click)="logout()">Sign Out</a></li>
       <li><a class="my-account-close-button"  (click)="closeButton()">Close</a></li>
     </ul>

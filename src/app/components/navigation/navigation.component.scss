@@ -3,6 +3,7 @@
   justify-content: space-between;
   align-items: center;
   margin-bottom: 5px;
+  padding: 14px 0;
   background-color: #674188;
 }
 
@@ -20,11 +21,11 @@
 .navigation-list {
   display: flex;
   justify-content: flex-end;
-  align-content: center;
+  margin-right: 50px;
 }
 
 .navigation-list-item {
-  margin-right: 20px;
+  margin: 0 20px;
   font-size: large;
   text-decoration: none;
   list-style-type: none;
