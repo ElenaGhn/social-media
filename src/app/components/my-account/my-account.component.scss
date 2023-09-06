@@ -1,11 +1,5 @@
 .my-account-wrapper {
-  position: fixed;
-  top: 0;
-  right: 0;
-  display: block;
-  text-align: right;
-  height: 100%;
-  width: 250px;
+  position: relative;
 }
 
 .my-account-dropdown-item{
@@ -14,13 +8,17 @@
   cursor: pointer;
   font-size: medium;
   color: white;
-  margin-top: 30px;
 }
 
 .my-account-dropdown-menu {
-  list-style-type: none;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  transform: translateY(100%);
   padding: 25px;
-  margin-top: 20px
+  color: black;
+  list-style-type: none;
+  background-color: yellow;
 }
 
 
