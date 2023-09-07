@@ -2,10 +2,13 @@
 
 ## Released
 
+### [0.0.4] [Feature [!4]](https://github.com/ElenaGhn/social-media/pull/4)
+
+- 
+
 ### [0.0.3] [Feature [!3]](https://github.com/ElenaGhn/social-media/pull/3)
 
 - sidenavigation css anapssungen
-
 
 ### [0.0.2] [Feature [!2]](https://github.com/ElenaGhn/social-media/pull/2)
 
