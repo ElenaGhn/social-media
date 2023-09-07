@@ -14,11 +14,10 @@
   position: absolute;
   bottom: 0;
   right: 0;
+  padding: 48px;
   transform: translateY(100%);
-  padding: 25px;
   color: black;
   list-style-type: none;
-  background-color: yellow;
 }
 
 
@@ -48,11 +47,11 @@
 }
 
 .my-account-close-button {
-  display: inline-block;
+  display: block;
+  text-align: right;
   margin-top: 20px;
   padding: 6px;
   border-radius: 6px;
-  text-align: right;
   font-size: medium;
   cursor: pointer;
 
