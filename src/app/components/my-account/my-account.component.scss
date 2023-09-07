@@ -15,10 +15,10 @@
   bottom: 0;
   right: 0;
   transform: translateY(100%);
-  padding: 25px;
+  padding: 48px;
   color: black;
   list-style-type: none;
-  background-color: yellow;
+  background-color: transparent;
 }
 
 
@@ -48,7 +48,8 @@
 }
 
 .my-account-close-button {
-  display: inline-block;
+  display: block;
+  text-align: right;
   margin-top: 20px;
   padding: 6px;
   border-radius: 6px;
