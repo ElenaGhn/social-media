@@ -4,7 +4,7 @@
 
 ### [0.0.4] [Feature [!4]](https://github.com/ElenaGhn/social-media/pull/4)
 
-- 
+- added first type
 
 ### [0.0.3] [Feature [!3]](https://github.com/ElenaGhn/social-media/pull/3)
 

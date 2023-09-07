@@ -10,12 +10,12 @@ import {AngularFireAuth} from "@angular/fire/compat/auth";
 })
 export class AuthService {
 
-  savedUsers: { email: string, password: string }[] = [];
+  savedUsers: User[] = [];
   isLoggedIn = false;
   user: { email: string, password: string }[] = [];
 
   constructor(private router: Router,
-              public afs: AngularFirestore, // Inject Firestore service
+              public afs: AngularFirestore,
               public afAuth: AngularFireAuth, // Inject Firebase auth service
   ) { }
 
