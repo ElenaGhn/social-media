@@ -7,7 +7,7 @@ import { PageNotFoundComponent} from "./components/page-not-found/page-not-found
 import { SharedPostsComponent} from "./components/shared-posts/shared-posts.component";
 import { LoginComponent} from "./components/login/login.component";
 import { RegisterComponent } from './components/register/register.component';
-import { AuthGuard } from './components/auth-guard.service';
+import { AuthGuard } from './guards/auth-guard.service';
 
 
 
